@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSNU Faculties - Beni-Suef National University</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>BSNU Faculties</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About the University</a>
+                <a href="#faculties" class="nav-link">Faculties and Programs</a>
+                <a href="#activities" class="nav-link">Activities and Events</a>
+                <a href="#admission" class="nav-link">Admission Details</a>
+                <a href="#support" class="nav-link">Technical Support</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle" class="theme-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to BSNU Faculties</h1>
+            <p class="hero-subtitle">Beni-Suef National University</p>
+            <p class="hero-description">Discover excellence in education through our diverse faculties and innovative programs</p>
+            <a href="#faculties" class="cta-button">Explore Faculties</a>
+        </div>
+        <div class="hero-background">
+            <!-- Faculty background images will be placed here -->
+            <div class="faculty-slideshow">
+                <div class="slide active" data-faculty="computers">
+                    <div class="slide-content">
+                        <h3>Faculty of Computers and Artificial Intelligence</h3>
+                        <p>Innovation through technology</p>
+                    </div>
+                </div>
+                <div class="slide" data-faculty="engineering">
+                    <div class="slide-content">
+                        <h3>Faculty of Engineering</h3>
+                        <p>Building the future</p>
+                    </div>
+                </div>
+                <div class="slide" data-faculty="medicine">
+                    <div class="slide-content">
+                        <h3>Faculty of Medicine</h3>
+                        <p>Advancing healthcare</p>
+                    </div>
+                </div>
+                <div class="slide" data-faculty="business">
+                    <div class="slide-content">
+                        <h3>Faculty of Business Administration</h3>
+                        <p>Leading with excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">About the University</h2>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-image">
+                        <img src="https://via.placeholder.com/300x400/4a90e2/ffffff?text=University+President" alt="University President">
+                    </div>
+                    <div class="leader-info">
+                        <h3>University President</h3>
+                        <p>Dr. [President Name]</p>
+                        <p>Leading BSNU towards academic excellence and innovation</p>
+                    </div>
+                </div>
+                <div class="vice-presidents">
+                    <h3>Vice Presidents</h3>
+                    <div class="vp-grid">
+                        <div class="vp-card">
+                            <img src="https://via.placeholder.com/200x250/5cb85c/ffffff?text=VP+Academic" alt="Vice President Academic">
+                            <h4>Vice President for Academic Affairs</h4>
+                            <p>Dr. [VP Academic Name]</p>
+                        </div>
+                        <div class="vp-card">
+                            <img src="https://via.placeholder.com/200x250/e74c3c/ffffff?text=VP+Student" alt="Vice President Student Affairs">
+                            <h4>Vice President for Student Affairs</h4>
+                            <p>Dr. [VP Student Name]</p>
+                        </div>
+                        <div class="vp-card">
+                            <img src="https://via.placeholder.com/200x250/f39c12/ffffff?text=VP+Research" alt="Vice President Research">
+                            <h4>Vice President for Research</h4>
+                            <p>Dr. [VP Research Name]</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculties Section -->
+    <section id="faculties" class="faculties-section">
+        <div class="container">
+            <h2 class="section-title">Faculties and Programs</h2>
+            <div class="faculties-grid">
+                <div class="faculty-card" data-faculty="computers">
+                    <div class="faculty-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Faculty of Computers and Artificial Intelligence</h3>
+                    <p>Explore cutting-edge technology and AI innovation</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('computers')">Learn More</button>
+                </div>
+                <div class="faculty-card" data-faculty="engineering">
+                    <div class="faculty-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Faculty of Engineering</h3>
+                    <p>Build the future with innovative engineering solutions</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('engineering')">Learn More</button>
+                </div>
+                <div class="faculty-card" data-faculty="medicine">
+                    <div class="faculty-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Faculty of Medicine</h3>
+                    <p>Advance healthcare through medical excellence</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('medicine')">Learn More</button>
+                </div>
+                <div class="faculty-card" data-faculty="business">
+                    <div class="faculty-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Faculty of Business Administration</h3>
+                    <p>Lead with strategic business management</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('business')">Learn More</button>
+                </div>
+                <div class="faculty-card" data-faculty="arts">
+                    <div class="faculty-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Faculty of Arts</h3>
+                    <p>Express creativity through artistic excellence</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('arts')">Learn More</button>
+                </div>
+                <div class="faculty-card" data-faculty="science">
+                    <div class="faculty-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Faculty of Science</h3>
+                    <p>Discover the wonders of scientific research</p>
+                    <button class="faculty-btn" onclick="openFacultyModal('science')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Modal -->
+    <div id="faculty-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="faculty-modal-content">
+                <div class="faculty-gallery">
+                    <div class="gallery-main">
+                        <img id="modal-main-image" src="" alt="Faculty Image">
+                    </div>
+                    <div class="gallery-thumbnails">
+                        <img src="https://via.placeholder.com/100x100/4a90e2/ffffff?text=1" alt="Gallery 1" class="thumbnail active">
+                        <img src="https://via.placeholder.com/100x100/5cb85c/ffffff?text=2" alt="Gallery 2" class="thumbnail">
+                        <img src="https://via.placeholder.com/100x100/e74c3c/ffffff?text=3" alt="Gallery 3" class="thumbnail">
+                        <img src="https://via.placeholder.com/100x100/f39c12/ffffff?text=4" alt="Gallery 4" class="thumbnail">
+                    </div>
+                </div>
+                <div class="faculty-info">
+                    <h2 id="modal-faculty-title">Faculty Title</h2>
+                    <div class="faculty-tabs">
+                        <button class="tab-btn active" data-tab="overview">Overview</button>
+                        <button class="tab-btn" data-tab="programs">Programs</button>
+                        <button class="tab-btn" data-tab="vision">Vision & Objectives</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="overview" class="tab-pane active">
+                            <h3>What You Will Study</h3>
+                            <p>Comprehensive curriculum designed to provide students with theoretical knowledge and practical skills in their chosen field.</p>
+                            <h3>Teaching System</h3>
+                            <p>Our credit hour system ensures flexible learning with modern teaching methodologies and hands-on experience.</p>
+                        </div>
+                        <div id="programs" class="tab-pane">
+                            <h3>Available Programs</h3>
+                            <div class="programs-list">
+                                <div class="program-item">
+                                    <h4>Bachelor's Degree</h4>
+                                    <p>4-year comprehensive program</p>
+                                </div>
+                                <div class="program-item">
+                                    <h4>Master's Degree</h4>
+                                    <p>Advanced studies and research</p>
+                                </div>
+                                <div class="program-item">
+                                    <h4>PhD Program</h4>
+                                    <p>Doctoral research and specialization</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="vision" class="tab-pane">
+                            <h3>Our Vision</h3>
+                            <p>To be a leading institution in academic excellence and innovation, preparing students for successful careers and contributing to society.</p>
+                            <h3>Objectives</h3>
+                            <ul>
+                                <li>Provide quality education and research opportunities</li>
+                                <li>Foster innovation and creativity</li>
+                                <li>Develop leadership and professional skills</li>
+                                <li>Contribute to community development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities Section -->
+    <section id="activities" class="activities-section">
+        <div class="container">
+            <h2 class="section-title">Activities and Events</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://via.placeholder.com/400x250/9b59b6/ffffff?text=Arts+Event" alt="Arts Event">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Annual Arts Festival</h3>
+                        <p class="activity-date">March 15, 2024</p>
+                        <p>Celebrating creativity and artistic expression through student performances and exhibitions.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://via.placeholder.com/400x250/3498db/ffffff?text=Sports+Event" alt="Sports Event">
+                    </div>
+                    <div class="activity-content">
+                        <h3>University Sports Championship</h3>
+                        <p class="activity-date">April 20, 2024</p>
+                        <p>Inter-faculty sports competition promoting teamwork and healthy competition.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://via.placeholder.com/400x250/e67e22/ffffff?text=Science+Fair" alt="Science Fair">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Science and Innovation Fair</h3>
+                        <p class="activity-date">May 10, 2024</p>
+                        <p>Showcasing student research projects and technological innovations.</p>
+                    </div>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://via.placeholder.com/400x250/1abc9c/ffffff?text=Conference" alt="Academic Conference">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Academic Conference</h3>
+                        <p class="activity-date">June 5, 2024</p>
+                        <p>International conference bringing together scholars and researchers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="admission-section">
+        <div class="container">
+            <h2 class="section-title">Admission Details</h2>
+            <div class="admission-content">
+                <div class="admission-info">
+                    <h3>Application Process</h3>
+                    <div class="process-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <div class="step-content">
+                                <h4>Online Application</h4>
+                                <p>Complete the online application form with required documents</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <div class="step-content">
+                                <h4>Document Submission</h4>
+                                <p>Submit academic transcripts, certificates, and identification documents</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-content">
+                                <h4>Entrance Exam</h4>
+                                <p>Take the required entrance examination for your chosen faculty</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-content">
+                                <h4>Interview</h4>
+                                <p>Attend a personal interview with faculty representatives</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">5</div>
+                            <div class="step-content">
+                                <h4>Acceptance</h4>
+                                <p>Receive acceptance letter and complete registration</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="admission-requirements">
+                    <h3>Requirements</h3>
+                    <ul>
+                        <li>High school diploma or equivalent</li>
+                        <li>Minimum GPA of 3.0 (or equivalent)</li>
+                        <li>English language proficiency (TOEFL/IELTS)</li>
+                        <li>Valid passport or national ID</li>
+                        <li>Medical examination certificate</li>
+                        <li>Application fee payment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Support Section -->
+    <section id="support" class="support-section">
+        <div class="container">
+            <h2 class="section-title">Technical Support</h2>
+            <div class="support-content">
+                <div class="contact-form">
+                    <div class="form-header">
+                        <i class="fas fa-inbox"></i>
+                        <h3>Contact Support</h3>
+                    </div>
+                    <form id="support-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="technical">Technical Issue</option>
+                                <option value="admission">Admission Inquiry</option>
+                                <option value="academic">Academic Question</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Beni-Suef National University<br>Beni-Suef, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+20 82 123 4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@bsnu.edu.eg</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Working Hours</h4>
+                            <p>Sunday - Thursday<br>8:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BSNU Faculties</h3>
+                    <p>Beni-Suef National University</p>
+                    <p>Excellence in Education and Innovation</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#faculties">Faculties</a></li>
+                        <li><a href="#admission">Admission</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@bsnu.edu.eg</p>
+                    <p>Phone: +20 82 123 4567</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Designed by</h3>
+                    <p><strong>Hamza Mostafa</strong></p>
+                    <p>hamzamostafaali96@gmail.com</p>
+                    <div class="social-links">
+                        <a href="https://github.com/HamzaAmmar0" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hamza-mostafa-945710271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BSNU Faculties. All rights reserved.</p>
+                <p>Designed by the Student Union of Beni-Suef National University (BSNU)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
